@@ -1,6 +1,7 @@
 import { ContactsList } from './ContactsList/ContactsList';
 import { InputForm } from './InputForm/InputForm';
 import { Filter } from './Filter/Filter';
+import { useSelector } from 'react-redux';
 
 export const App = () => {
   return (

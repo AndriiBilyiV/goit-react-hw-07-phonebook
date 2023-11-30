@@ -1,7 +1,7 @@
 import { Button } from './ContactCard.style';
 import { IoTrashBinOutline } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
-import { del } from 'redux/contactsSlice';
+import { deleteContact } from 'redux/operations';
 
 export const ContactCard = ({ item }) => {
   const dispach = useDispatch();
@@ -9,7 +9,7 @@ export const ContactCard = ({ item }) => {
   return (
     <div>
       {name}: {tel}
-      <Button onClick={() => dispach(del(id))}>
+      <Button onClick={() => dispach(deleteContact(id))}>
         <IoTrashBinOutline />
       </Button>
     </div>
