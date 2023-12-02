@@ -1,15 +1,22 @@
 import { ContactsList } from './ContactsList/ContactsList';
 import { InputForm } from './InputForm/InputForm';
 import { Filter } from './Filter/Filter';
+import {
+  ContactsBox,
+  MainTitle,
+  SecondryTitle,
+} from './ContactsBox/ContactsBox.styled';
 
 export const App = () => {
   return (
-    <div>
-      <h2>PhoneBook</h2>
+    <ContactsBox>
+      <MainTitle>PhoneBook</MainTitle>
       <InputForm />
-      <h2>Contacts</h2>
+
+<SecondryTitle>Contacts</SecondryTitle>
       <Filter />
       <ContactsList />
-    </div>
+
+    </ContactsBox>
   );
 };

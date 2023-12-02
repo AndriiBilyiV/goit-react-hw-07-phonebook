@@ -1,6 +1,12 @@
 import { Formik, Field } from 'formik';
 import * as Yup from 'yup';
-import { FieldTitle, StyledForm, ValidError } from './InputForm.styled';
+import {
+  FieldTitle,
+  Input,
+  StyledForm,
+  Submit,
+  ValidError,
+} from './InputForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from 'redux/selectors';
 import { addContact } from 'redux/operations';
@@ -47,15 +53,15 @@ export const InputForm = () => {
         <StyledForm>
           <FieldTitle>
             Name
-            <Field name="name" />
+            <Input name="name" />
             <ValidError name="name" component="div" />
           </FieldTitle>
           <FieldTitle>
             Number
-            <Field type="number" name="tel" />
+            <Input type="number" name="tel" />
             <ValidError name="tel" component="div" />
           </FieldTitle>
-          <button type="submit">Add contact</button>
+          <Submit type="submit">Add contact</Submit>
         </StyledForm>
       </Formik>
     </div>

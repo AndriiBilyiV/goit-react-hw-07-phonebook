@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import { FilterInput, Message } from './Filter.styled';
 
 const filter = value => {
   return {
@@ -11,8 +12,8 @@ export const Filter = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <p>Find contacts by name</p>
-      <input onChange={evt => dispatch(filter(evt.target.value))} />
+      <Message>Find contacts by name</Message>
+      <FilterInput onChange={evt => dispatch(filter(evt.target.value))} />
     </div>
   );
 };

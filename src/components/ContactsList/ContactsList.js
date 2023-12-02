@@ -1,5 +1,5 @@
 import { ContactCard } from 'components/ContactCard/ContactCard';
-import { List } from './ContactsList.styled';
+import { List, SectionWrapper } from './ContactsList.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   getContacts,
@@ -42,7 +42,7 @@ export const ContactsList = () => {
 
   const contactsList = getFilteredContacts();
   return (
-    <>
+    <SectionWrapper>
       {isLoading ? <Loading /> : null}
       <Toaster />
       <List>
@@ -54,6 +54,6 @@ export const ContactsList = () => {
           );
         })}
       </List>
-    </>
+    </SectionWrapper>
   );
 };
